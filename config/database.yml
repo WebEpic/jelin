@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgreql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: jelin-dev
+
+test:
+  <<: *default
+  database: jelin-test
+
+production:
+  <<: *default
+  database: jelin-prod
